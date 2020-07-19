@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="1000"
+        android:dialogTitle="Select initial amount"
+        android:entries="@array/settings_list_amount_values"
+        android:entryValues="@array/settings_list_amount_values"
+        android:key="amount"
+        android:summary="Click to show a list to choose from"
+        android:title="Initial Amount" />
+
+    <ListPreference
+        android:defaultValue="300"
+        android:dialogTitle="Select minimum bet"
+        android:entries="@array/settings_list_minimum_bet_values"
+        android:entryValues="@array/settings_list_minimum_bet_values"
+        android:key="bet"
+        android:summary="Click to show a list to choose from"
+        android:title="Minimum Betting Amount" />
+
+
+</PreferenceScreen>

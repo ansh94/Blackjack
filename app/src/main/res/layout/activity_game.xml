@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".ui.BlackjackActivity">
+
+    <LinearLayout
+        android:id="@+id/dealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/dealerCard1"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:id="@+id/dealerCard2"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:id="@+id/dealerCard3"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:id="@+id/dealerCard4"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:id="@+id/dealerCard5"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/player"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dealer"
+        tools:text="Score: 0" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/player"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dealer"
+        tools:text="Money: 1000" />
+
+    <Button
+        android:id="@+id/newGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="120dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/new_game"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/player"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/score" />
+
+    <LinearLayout
+        android:id="@+id/player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/buttons"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/score">
+
+        <ImageView
+            android:id="@+id/playerCard1"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:id="@+id/playerCard2"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:id="@+id/playerCard3"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:id="@+id/playerCard4"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+
+        <ImageView
+            android:id="@+id/playerCard5"
+            android:layout_width="70dp"
+            android:layout_height="100dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player">
+
+        <Button
+            android:id="@+id/passBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            android:width="150dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="@string/pass"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/hitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:width="150dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="@string/hit"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
